@@ -19,14 +19,19 @@ const router = createRouter({
       component: () => import('../views/company/GreetingPage.vue')
     },
     {
+      path: '/company/location',
+      name: 'LocationPage',
+      component: () => import('../views/company/LocationPage.vue')
+    },
+    {
       path: '/products/phosphate',
-      name: 'Phosphate',
-      component: () => import('../views/products/Phosphate.vue')
+      name: 'PhosphatePage',
+      component: () => import('../views/products/PhosphatePage.vue')
     },
      {
       path: '/products/alkali',
-      name: 'Alkali',
-      component: () => import('../views/products/Alkali.vue')
+      name: 'AlkaliPage',
+      component: () => import('../views/products/AlkaliPage.vue')
     },
   ]
 })
