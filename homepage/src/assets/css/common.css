@@ -36,7 +36,7 @@ body { font-family: "Oxygen", sans-serif; }
 .home_swiper .swiper-wrapper .swiper-slide { background-color: rgba(0, 0, 50, 0.5); background-size: cover; background-position: center; }
 .home_swiper .swiper-wrapper .swiper-slide .overlay { background-color: rgba(245,250,255,0.1); inset: 0; position: absolute; width: 100%; height: 100%;}
 .home_swiper .swiper-wrapper .swiper-slide .main_title { text-shadow: 0 0 5px rgba(13,11,125,0.8), 2px 2px 4px rgba(0,0,0,0.7), -2px -2px 4px rgba(0,0,0,0.7); left: 210px; bottom: 100px; white-space: pre-line; z-index: 5; position: absolute; color:#fff; font-weight: 700; font-size: 55px; line-height: 76px; }
-.home_swiper .swiper-wrapper .swiper-slide .main_title.text-center { text-align: center; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); background-color: rgba(0,0,0,.541); align-content: center; padding: 20px 80px; border-radius: 4px;}
+.home_swiper .swiper-wrapper .swiper-slide .main_title.text-center { min-height: 346px; text-align: center; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); background-color: rgba(0,0,0,.541); align-content: center; padding: 20px 80px; border-radius: 4px;}
 
 .bg_wrap { width: 100%; max-height: 350px; position: relative; height: 100%; }
 .bg_wrap > img { width: 100%; height: 100%; object-fit: cover; }
@@ -71,9 +71,10 @@ body { font-family: "Oxygen", sans-serif; }
 .content_wrap .content.product .body .left_wrap .img_wrap > img {width: 100%; height: 100%; object-fit: contain; }
 .content_wrap .content.product .body .left_wrap { flex: 1; align-self: center; }
 .content_wrap .content.product .body .right_wrap { flex: 1; padding-left: 48px; }
-.content_wrap .content.product .body.detail { gap: 12px; justify-content: center; }
+.content_wrap .content.product .body.detail { gap: 12px; justify-content: center; padding: 38px; }
 .content_wrap .content.product .body.detail .img_wrap { width: 291px; }
 .content_wrap .content.product .body.detail .img_wrap > img { height: 100%; width: 100%; object-fit: cover; }
+.content_wrap .content.product.alkali .body.detail .img_wrap > img { height: fit-content; }
 
 .section-list { padding: 0; list-style: none; }
 .section-list > li { margin-bottom: 24px; }

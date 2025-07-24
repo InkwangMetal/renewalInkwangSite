@@ -23,6 +23,11 @@ const router = createRouter({
       name: 'Phosphate',
       component: () => import('../views/products/Phosphate.vue')
     },
+     {
+      path: '/products/alkali',
+      name: 'Alkali',
+      component: () => import('../views/products/Alkali.vue')
+    },
   ]
 })
 
