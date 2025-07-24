@@ -15,9 +15,11 @@ const props = defineProps({
   }
 })
 
+const emit = defineEmits(['update:tabNum'])
 const active = ref(0)
 
 const clickTab = (idx) => {
   active.value = idx
+  emit('update:tabNum', idx)
 }
 </script>

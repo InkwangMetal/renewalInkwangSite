@@ -8,8 +8,8 @@
       <div class="content_wrap">
         <div class="content product">
           <h1 class="title">인산염 피막</h1>
-          <CustomTab :menuList="menuList" />
-          <div class="body">
+          <CustomTab :menuList="menuList" @update:tabNum="tabInfo" />
+          <div class="body" v-if="tabIdx === 0">
             <div class="left_wrap">
               <div class="img_wrap">
                 <img :src="PhosphateImg"/>
@@ -45,6 +45,22 @@
               </ul>
             </div>
           </div>
+          <div class="body detail" v-else>
+            <div class="img_wrap">
+              <img src="../../assets/images/pp_1.jpeg" />
+            </div>
+            <div class="img_wrap">
+              <img src="../../assets/images/pp_2.jpeg" />
+            </div>
+            <div class="flex-col">
+              <div class="img_wrap">
+                <img src="../../assets/images/pp_3.jpeg" />
+              </div>
+              <div class="img_wrap">
+                <img src="../../assets/images/pp_4.jpeg" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -52,12 +68,14 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import SidebarMenu from '@/components/common/SidebarMenu.vue'
 import BackgroundImg from '@/components/common/BackgroundImg.vue'
 import CustomTab from '@/components/common/CustomTab.vue'
 import bgImg from '@/assets/images/product_img.jpg'
 import PhosphateImg from '@/assets/images/phosphate_img.jpeg'
 
+const tabIdx = ref(0)
 const menuItem = [
   { title: '인산염피막', path: '/products/phosphate' },
   { title: '알카리착색', path: '/products/alkali' }
@@ -73,6 +91,9 @@ const menuList = [
   { title: '제품상세' },
 ]
 
+const tabInfo = (idx) => {
+  tabIdx.value = idx
+}
 </script>
 
 <style scoped>
